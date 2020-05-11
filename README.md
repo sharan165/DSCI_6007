@@ -1,19 +1,19 @@
 # DSCI_6007
-Final Project on Netflix Recommendation System
+## Final Project on Netflix Recommendation System
 
-## Motivation
+### Motivation
 Considering Data Engineering as an integral part of data world, Spark plays a big role in big data processing. The project on Netflix recommendation program was one of the top problems of last decade which made lot of noise in the tech world. Knowing the fact that the dataset has 3.25 million records makes it a good data engineering problem, using spark cluster and pythonic ways.
 
-## Introduction
+### Introduction
 We all know recommendations system play a big part in online business specially e-commerce and streaming services. Companies need to recommend the products which would attract users and compel them to buy. Looking at the customer side, they want to get  recommendations based on their taste and liking.
 The dataset consists of ratings given by users to different movies, also the details of the movies. It consists of a total 3.25 million records for training and 100,000 records for testing. In this case, collaborative filtering techniques like item-item filter and user-user filter to compare and use the best among them. Along with-it using cosine distance similarity between the records to give the best possible recommendations. Finally applying Alternating Least Squares algorithm to get the results. By doing this project, I got an idea about the entire workflow of a recommendation system.
 
-## Approach
+### Approach
 
-1.	Data Analysis:
-	Once we have	imported the data from the S3 bucket into our spark cluster, we store all the data in spark dataframe. For our analytic use, convert the pyspark dataframe into pandas dataframe.
+#### 1.	Data Analysis:
+Once we have	imported the data from the S3 bucket into our spark cluster, we store all the data in spark dataframe. For our analytic use, convert the pyspark dataframe into pandas dataframe.
 Trying to get to know how the data is spread, what kind of values are in, how many of them are present, etc. plays a very important role to understand what is to be done in the next steps like selecting an algorithm, number of iterations to done considering the size of the data and so on.
-2.	Collaborative filtering approach
+#### 2.	Collaborative filtering approach
   These are the two different filtering approaches one can use to recommend any kind of thing. In this problem, we are using the collaborative approach to recommend Netflix shows/movies to different users.
 
 In the collaborative approach, there are two different memory-based algorithms:
@@ -32,7 +32,7 @@ b.	Item-item Collaborative Filtering
     It is the cosine of the angle between the two vectors which are being considered.
     If the vectors are close than cosine value will be large. 
 
-3.Implementing the algorithm using pyspark
+#### 3.Implementing the algorithm using pyspark
 
 The approach her is to apply the Alternating Least Squares method from the ML library of pyspark. Idea was to train the entire 3.25 million records and testing on the 100,000 records from test set. 
 
@@ -40,7 +40,7 @@ The algorithm has various hyper parameters like regParam, max iterations, user c
 
  
 
-4.	Testing by adding personal records
+#### 4.	Testing by adding personal records
 
 Created a text file consisting of 15 records and added it to the training data, then predicted the recommendations for me.
 
