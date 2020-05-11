@@ -44,7 +44,7 @@ The algorithm has various hyper parameters like regParam, max iterations, user c
 
 Created a text file consisting of 15 records and added it to the training data, then predicted the recommendations for me.
 
-Conclusion and Future work
+### Conclusion and Future work
 
 The most important thing we learnt in with this project is the importance of collaborative filtering techniques in recommendation system. Also, how spark plays a big role in providing the computational power to complete this heavy task.
 
